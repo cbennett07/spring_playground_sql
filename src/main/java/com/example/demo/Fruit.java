@@ -12,6 +12,18 @@ public class Fruit {
     private String name;
     private String color;
     private boolean isRipe;
+    @Enumerated(EnumType.STRING)
+    private Season season;
+
+    public Season getSeason() {
+        return season;
+    }
+
+    public void setSeason(Season season) {
+        this.season = season;
+    }
+
+    public enum Season{WINTER, SPRING, SUMMER, FALL}
 
     public Long getId() {
         return id;
